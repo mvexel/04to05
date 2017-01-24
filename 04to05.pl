@@ -192,7 +192,7 @@ if (@ARGV) {
     $p->parsefile($_) for @ARGV;
 }
 else {
-    $p->parse( \*STDIN );
+    $p->parse( \*STDIN, ProtocolEncoding => 'ISO-8859-1' );
 }
 
 for my $seg ( values %segs ) {
